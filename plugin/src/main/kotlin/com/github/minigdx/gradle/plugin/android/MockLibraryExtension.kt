@@ -12,6 +12,8 @@ open class MockLibraryExtension(project: Project) {
 
     fun compileSdkVersion(param: Int) = Unit
 
+    var compileSdk: Int = 0
+
     var buildToolsVersion: String = ""
 
     fun compileOptions(block: EmptyCompileOptions.() -> Unit) = Unit
@@ -44,4 +46,6 @@ open class EmptyDefaultConfig {
     fun minSdkVersion(param: Int) = Unit
     fun targetSdkVersion(param: Int) = Unit
     fun maxSdkVersion(param: Int) = Unit
+
+    var minSdk: Int = 0
 }
